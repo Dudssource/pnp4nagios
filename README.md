@@ -13,7 +13,7 @@
 
 To install and configure the Grafana datasource, check the [official](https://grafana.com/plugins/sni-pnp-datasource/installation) tutorial.
 
-### Configuration example:
+### Grafana PNP Datasource configuration example
 
 Name: Nagios
 Type: PNP

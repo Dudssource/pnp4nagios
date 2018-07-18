@@ -63,6 +63,10 @@ if (is_readable('./lang/lang_' . $conf['lang'] . '.php')) {
 	include ('./lang/lang_en.php');
 }
 
+# timezone configuration
+# check https://secure.php.net/manual/pt_BR/timezones.php
+$timezone="America/Sao_Paulo";
+
 # Debugger init
 $debug = new check;
 
@@ -267,6 +271,7 @@ function labels() {
 function metrics(){
     global $timerange;
     global $conf;
+    global $timezone;
     // extract metrics for a given datasource
     // TODO Multiple sources via regex
     if ($_SERVER['REQUEST_METHOD'] != 'POST') {
@@ -382,7 +387,7 @@ function metrics(){
 
           $i  = 0;
             foreach ( $xpd->row as $row){
-              $datetime = DateTime::createFromFormat("d.m.y H:i", $row->time, new DateTimeZone( "America/Sao_Paulo" ));
+              $datetime = DateTime::createFromFormat("d.m.y H:i", $row->time, new DateTimeZone( $timezone ));
               $timestamp = $datetime->getTimestamp() * 1000;
               $d = (string) $row->$tmp_perflabel['name'];
               if ($d == "NaN"){

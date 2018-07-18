@@ -7,7 +7,7 @@
 
 ## Installation
 
- To install it, just get the latest version from the respository and save it inside the `/usr/local/nagios/share/pnp/` folder. No extra configuration is required.
+ To install it, just get the latest version from the respository and save it inside the `/usr/local/nagios/share/pnp/` folder. The only configuration needed is the variable `$timezone` (inside the api.php file), that should be configured with the same tz of the server that is running the Nagios instance.
 
 `wget "https://github.com/Dudssource/pnp4nagios/raw/master/api.php" -O /usr/local/nagios/share/pnp/api.php`
 

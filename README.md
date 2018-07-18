@@ -13,6 +13,17 @@
 
 To install and configure the Grafana datasource, check the [official](https://grafana.com/plugins/sni-pnp-datasource/installation) tutorial.
 
+### Configuration example:
+
+Name: Nagios
+Type: PNP
+
+URL: http://localhost/nagios/pnp/api.php/
+Access: Server (Default)
+
+Auth: Basic Auth x
+
+
 ## Tips
 - The Grafana datasource should be configured with Basic Authentication
 - If you can´t find a service listed in the Services combo, it´s probably because or the service doesn´t have generated performance data or it´ because the RRD file related to the service wasn't modified in the last 6 hours (it probably means that the service is inactive). This time can be changed in the file `/usr/local/nagios/etc/pnp/config.php`, configuration `$conf['max_age']`

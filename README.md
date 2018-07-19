@@ -1,8 +1,8 @@
 # pnp4nagios
  Nagios PNP Grafana API , an alternative version of https://github.com/lingej/pnp-metrics-api/raw/master/application/controller/api.php that works with older versions of Nagios core (4.0.8 - 4.2.4) , PNP (0.4.14) and rrdtool (1.3.8).
  This api was created to be used by the [sni-pnp-datasource](https://grafana.com/plugins/sni-pnp-datasource), which is a Grafana backend datasource using PNP4Nagios/PNP NPCD to access RRD files.
- This api is also intended to be compatible with the Nagios CentOS VM.
- Internally this api doensn´t work like the lingej version because of the version of the rrdtool used (the latest version of the Nagios CentOS VM comes with rrdtool 1.3.8 installed), but it works very well :smile:
+ This api is also intended to be compatible with the Nagios CentOS 6.x VM.
+ Internally this api doensn´t work like the lingej version because of the version of the rrdtool used (the latest version of the Nagios CentOS 6.x VM comes with rrdtool 1.3.8 installed), but it works very well :smile:
 
 
 ## Installation
